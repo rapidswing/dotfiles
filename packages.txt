@@ -1,6 +1,5 @@
 () - if appropriate
 
-base-devel
 bitwarden
 btop
 egl-wayland
@@ -33,5 +32,5 @@ ttf-opensans
 ttf-roboto
 vesktop-bin ()
 visual-studio-code-bin
-xdk-desktop-portal-wlr
+xdg-desktop-portal-wlr
 xwayland-satellite
