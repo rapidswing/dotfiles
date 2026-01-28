@@ -17,6 +17,7 @@ noto-fonts-extra
 nvidia-open ()
 nvidia-settings ()
 opendeck-bin ()
+openssh
 paru
 polkit-kde-bin
 protonup-qt ()
