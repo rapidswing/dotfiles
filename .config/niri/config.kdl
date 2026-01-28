@@ -1,0 +1,81 @@
+spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1 &"
+spawn-at-startup "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP NIRI_SOCKET"
+
+input {
+  
+}
+
+output "DP-4" {
+  mode "3840x2160@120.005"
+  scale 1.25
+  variable-refresh-rate on-demand=true
+}
+
+binds {
+  MOD+C 		      repeat=false { "close-window"; }
+  MOD+F           repeat=false { "maximize-column"; }
+  MOD+SHIFT+F     repeat=false { "fullscreen-window"; }
+  MOD+L           repeat=false { spawn "swaylock" "-c" "000000"; }
+
+  MOD+LEFT        { focus-column-left; }
+  MOD+RIGHT       { focus-column-right; }
+  MOD+UP          { focus-window-up; }
+  MOD+DOWN        { focus-window-down; }
+
+  MOD+CTRL+LEFT   { move-column-left; }
+  MOD+CTRL+RIGHT  { move-column-right; }
+  MOD+CTRL+UP     { move-window-up; }
+  MOD+CTRL+DOWN   { move-window-down; }
+
+  MOD+CTRL+PAGE_DOWN  cooldown-ms=150 { move-column-to-workspace-down; }
+  MOD+CTRL+PAGE_UP    cooldown-ms=150 { move-column-to-workspace-up; }
+  MOD+PAGE_DOWN       cooldown-ms=150 { focus-workspace-down; }
+  MOD+PAGE_UP         cooldown-ms=150 { focus-workspace-up; }
+
+  MOD+BRACKETLEFT   { consume-or-expel-window-left; }
+  MOD+BRACKETRIGHT  { consume-or-expel-window-right; }
+
+  MOD+E  		        repeat=false { spawn "thunar"; }
+  MOD+Q  		        repeat=false { spawn "ghostty"; }
+  MOD+RETURN		    repeat=false { spawn-sh "google-chrome-stable"; }
+  MOD+SHIFT+RETURN  repeat=false { spawn-sh "chrome-work"; }
+  MOD+SPACE 		    repeat=false { spawn-sh "rofi -show drun"; }
+  CTRL+ALT+DELETE	  repeat=false { "quit"; }
+
+  XF86AudioRaiseVolume  allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+"; }
+  XF86AudioLowerVolume  allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-"; }
+
+  PRINT           { screenshot; }
+}
+
+environment {
+  XDG_CURRENT_DESKTOP 	"niri"
+}
+
+layout {
+  gaps 12
+  background-color "#000000"
+
+  focus-ring {
+    width 2
+    active-color "#206060"
+  }
+}
+
+window-rule {
+  match app-id=r#"^steam_app"#
+  focus-ring {
+    off
+  }
+}
+
+gestures {
+  hot-corners {
+    off
+  }
+}
+
+hotkey-overlay {
+  skip-at-startup
+  hide-not-bound
+}

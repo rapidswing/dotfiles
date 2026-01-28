@@ -1,0 +1,5 @@
+#!/bin/bash
+exec google-chrome-stable \
+  --user-data-dir="$HOME/.config/chrome-work" \
+  --disable-gpu \
+  --use-gl=swiftshader "$@"

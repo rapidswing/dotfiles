@@ -1,0 +1,36 @@
+() - if appropriate
+
+base-devel
+bitwarden
+btop
+egl-wayland
+ghostty
+git
+google-chrome
+mako
+nano
+niri
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+noto-fonts-extra
+nvidia-open ()
+nvidia-settings ()
+opendeck-bin ()
+paru
+polkit-kde-bin
+protonup-qt ()
+rofi
+rsync
+sddm
+steam ()
+swaylock
+thunar
+tldr
+ttf-dejavu
+ttf-opensans
+ttf-roboto
+vesktop-bin ()
+visual-studio-code-bin
+xdk-desktop-portal-wlr
+xwayland-satellite

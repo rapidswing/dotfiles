@@ -1,0 +1,2 @@
+- copy dotfiles/chrome-work to /usr/local/bin/
+- mkdir ~/.config/chrome-work
