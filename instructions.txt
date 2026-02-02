@@ -1,26 +1,10 @@
 - systemctl enable sddm
+- systemctl --user enable --now polkit-gnome.service
 - systemctl enable --user mako
 
 - copy dotfiles/chrome-work to /usr/local/bin/
 - mkdir ~/.config/chrome-work
 
-
 - edit: /etc/environment
 LIBVA_DRIVER_NAME=nvidia
 NVD_BACKEND=direct
-
-
-- create: ~/.config/systemd/user/polkit-gnome.service
----START---
-# ~/.config/systemd/user/polkit-gnome.service
-[Unit]
-Description=PolicyKit Authentication Agent (GNOME)
-
-[Service]
-ExecStart=/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-Restart=on-failure
-
-[Install]
-WantedBy=default.target
----END---
-- systemctl --user enable --now polkit-gnome.service
