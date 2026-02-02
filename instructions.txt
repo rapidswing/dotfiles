@@ -24,12 +24,3 @@ Restart=on-failure
 WantedBy=default.target
 ---END---
 - systemctl --user enable --now polkit-gnome.service
-
-
-- create: ~/.config/chrome-flags.conf
----START---
---ozone-platform=wayland
---use-angle=opengl
---enable-features=VaapiVideoDecoder
---disable-features=UseAV1Decoder,UseChromeOSDirectVideoDecoder
----END---
