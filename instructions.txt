@@ -28,5 +28,8 @@ WantedBy=default.target
 
 - create: ~/.config/chrome-flags.conf
 ---START---
---ozone-platform=wayland                                                                                           --use-angle=vulkan
+--ozone-platform=wayland
+--use-angle=opengl
+--enable-features=VaapiVideoDecoder
+--disable-features=UseAV1Decoder,UseChromeOSDirectVideoDecoder
 ---END---
