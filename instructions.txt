@@ -1,5 +1,5 @@
-- systemctl enable --now sddm
-
+- systemctl enable sddm
+- systemctl enable --user mako
 
 - copy dotfiles/chrome-work to /usr/local/bin/
 - mkdir ~/.config/chrome-work
