@@ -38,6 +38,7 @@ tldr
 ttf-dejavu
 ttf-opensans
 vesktop-bin
+virt-viewer
 visual-studio-code-bin
 wl-clipboard
 wtype
