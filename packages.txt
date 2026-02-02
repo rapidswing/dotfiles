@@ -6,31 +6,40 @@ egl-wayland
 ghostty
 git
 google-chrome
+lib32-mesa
+lib32-mesa-utils
+lib32-nvidia-utils
+lib32-opencl-nvidia
+libva-nvidia-driver
+libva-utils
 mako
+man-db
+man-pages
 nano
 niri
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
-noto-fonts-extra
-nvidia-open ()
-nvidia-settings ()
-opendeck-bin ()
+nvidia-open
+nvidia-settings
+nvidia-utils
+nvtop
 openssh
-paru
-polkit-kde-bin
-protonup-qt ()
+polkit-gnome
+protonup-qt
 rofi
+rofimoji
 rsync
 sddm
-steam ()
+steam
 swaylock
 thunar
 tldr
 ttf-dejavu
 ttf-opensans
-ttf-roboto
-vesktop-bin ()
+vesktop-bin
 visual-studio-code-bin
+wl-clipboard
+wtype
 xdg-desktop-portal-wlr
 xwayland-satellite
