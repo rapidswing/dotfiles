@@ -1,0 +1,10 @@
+# ~/.config/systemd/user/polkit-gnome.service
+[Unit]
+Description=PolicyKit Authentication Agent (GNOME)
+
+[Service]
+ExecStart=/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
