@@ -1,14 +1,25 @@
-spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1 &"
-spawn-at-startup "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP NIRI_SOCKET"
-
 input {
   
 }
 
-output "DP-4" {
-  mode "3840x2160@120.005"
-  scale 1.25
+// HOME MONITORS
+
+
+// WORK MONITORS
+output "HDMI-A-1" {
+  mode "1920x1080@60.000"
+  position x=0 y=0
+}
+
+output "DP-1" {
+  mode "2560x1440@143.912"
   variable-refresh-rate on-demand=true
+  position x=1920 y=0
+}
+
+output "HDMI-A-2" {
+  mode "1920x1080@60.000"
+  position x=4480 y=0
 }
 
 binds {
@@ -35,11 +46,18 @@ binds {
   MOD+BRACKETLEFT   { consume-or-expel-window-left; }
   MOD+BRACKETRIGHT  { consume-or-expel-window-right; }
 
+  MOD+SHIFT+LEFT    { focus-monitor-left; }
+  MOD+SHIFT+RIGHT   { focus-monitor-right; }
+
+  MOD+CTRL+SHIFT+LEFT   { move-window-to-monitor-left; }
+  MOD+CTRL+SHIFT+RIGHT  { move-window-to-monitor-right; }
+
   MOD+E  		        repeat=false { spawn "thunar"; }
   MOD+Q  		        repeat=false { spawn "ghostty"; }
   MOD+RETURN		    repeat=false { spawn-sh "google-chrome-stable"; }
   MOD+SHIFT+RETURN  repeat=false { spawn-sh "chrome-work"; }
   MOD+SPACE 		    repeat=false { spawn-sh "rofi -show drun"; }
+  MOD+PERIOD        repeat=false { spawn-sh "rofimoji --action type --typer wtype"; }
   CTRL+ALT+DELETE	  repeat=false { "quit"; }
 
   XF86AudioRaiseVolume  allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+"; }
@@ -67,6 +85,31 @@ window-rule {
   focus-ring {
     off
   }
+}
+
+window-rule {
+  match title=r#"^Outlook \(PWA\)"#
+  open-on-output "HDMI-A-1"
+}
+
+window-rule {
+  match title=r#"^Microsoft Teams \(PWA\)"#
+  open-on-output "HDMI-A-1"
+}
+
+window-rule {
+  match app-id="code"
+  open-on-output "DP-1"
+}
+
+window-rule {
+  match app-id="google-chrome"
+  open-on-output "HDMI-A-2"
+}
+
+layer-rule {
+  match namespace="notifications"
+  baba-is-float true
 }
 
 gestures {
