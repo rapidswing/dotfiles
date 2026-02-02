@@ -1,0 +1,11 @@
+[Unit]
+Description=OpenDeck Background Service
+After=graphical-session.target pipewire.service
+
+[Service]
+ExecStart=/usr/bin/opendeck
+Restart=on-failure
+Environment=XDG_RUNTIME_DIR=%t
+
+[Install]
+WantedBy=default.target
