@@ -1,14 +1,17 @@
 - systemctl enable --now sddm
 
+
 - copy dotfiles/chrome-work to /usr/local/bin/
 - mkdir ~/.config/chrome-work
+
 
 - edit: /etc/environment
 LIBVA_DRIVER_NAME=nvidia
 NVD_BACKEND=direct
 
--create: ~/.config/systemd/user/polkit-gnome.service
-----------
+
+- create: ~/.config/systemd/user/polkit-gnome.service
+---START---
 # ~/.config/systemd/user/polkit-gnome.service
 [Unit]
 Description=PolicyKit Authentication Agent (GNOME)
@@ -19,5 +22,11 @@ Restart=on-failure
 
 [Install]
 WantedBy=default.target
-----------
+---END---
 - systemctl --user enable --now polkit-gnome.service
+
+
+- create: ~/.config/chrome-flags.conf
+---START---
+--ozone-platform=wayland                                                                                           --use-angle=vulkan
+---END---
