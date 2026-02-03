@@ -7,7 +7,7 @@
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias lsa='eza'
+alias ls='eza'
 PS1='[\u@\h \W]\$ '
 # bun
 export BUN_INSTALL="$HOME/.bun"
