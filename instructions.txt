@@ -13,4 +13,4 @@ NVD_BACKEND=direct
 update-desktop-database ~/.local/share/applications
 
 curl -fsSL https://bun.com/install | bash
-source ~/.bash_profile
+source ~/.bash_rc
