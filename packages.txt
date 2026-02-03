@@ -25,6 +25,7 @@ nvidia-open
 nvidia-settings
 nvidia-utils
 nvtop
+openbsd-netcat
 opencl-nvidia
 opendeck
 openssh
