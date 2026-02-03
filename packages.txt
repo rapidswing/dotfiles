@@ -3,7 +3,7 @@ bitwarden
 btop
 egl-wayland
 eza
-ghostty
+foot
 git
 gnome-keyring
 google-chrome
