@@ -1,3 +1,9 @@
 #!/bin/bash
 exec google-chrome-stable \
-  --user-data-dir="$HOME/.config/chrome-work"
+  --user-data-dir="$HOME/.config/chrome-work" \
+  --flag-switches-begin \
+  --ozone-platform=wayland \
+  --use-angle=opengl \
+  --use-gl=egl \
+  --disable-gpu-driver-bug-workarounds
+  --flag-switches-end

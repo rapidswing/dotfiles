@@ -1,0 +1,8 @@
+#!/bin/bash
+exec google-chrome-stable \
+  --user-data-dir="$HOME/.config/chrome-personal" \
+  --flag-switches-begin \
+  --ozone-platform=wayland
+  --enable-features=VaapiVideoDecoder
+  --disable-features=UseAV1Decoder
+  --flag-switches-end
