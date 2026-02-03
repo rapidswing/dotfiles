@@ -2,6 +2,7 @@ bind
 bitwarden
 btop
 egl-wayland
+eza
 ghostty
 git
 gnome-keyring
