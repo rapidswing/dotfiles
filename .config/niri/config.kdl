@@ -53,7 +53,7 @@ binds {
   MOD+CTRL+SHIFT+RIGHT  { move-window-to-monitor-right; }
 
   MOD+E  		        repeat=false { spawn "thunar"; }
-  MOD+Q  		        repeat=false { spawn "ghostty"; }
+  MOD+Q  		        repeat=false { spawn "foot"; }
   MOD+RETURN		    repeat=false { spawn-sh "chrome-personal"; }
   MOD+SHIFT+RETURN  repeat=false { spawn-sh "chrome-work"; }
   MOD+SPACE 		    repeat=false { spawn-sh "rofi -show drun"; }
