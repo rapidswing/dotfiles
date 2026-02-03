@@ -1,7 +1,7 @@
 - systemctl enable sddm
 - systemctl --user enable --now polkit-gnome.service
-- systemctl enable --user mako.service
-- systemctl enable --user --now gnome-keyring.service
+- systemctl --user enable mako.service
+- systemctl --user enable --now gnome-keyring.service
 
 - copy dotfiles/chrome-work to /usr/local/bin/
 - mkdir ~/.config/chrome-work
@@ -9,3 +9,5 @@
 - edit: /etc/environment
 LIBVA_DRIVER_NAME=nvidia
 NVD_BACKEND=direct
+
+update-desktop-database ~/.local/share/applications
