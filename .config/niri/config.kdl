@@ -54,7 +54,7 @@ binds {
 
   MOD+E  		        repeat=false { spawn "thunar"; }
   MOD+Q  		        repeat=false { spawn "ghostty"; }
-  MOD+RETURN		    repeat=false { spawn-sh "google-chrome-stable"; }
+  MOD+RETURN		    repeat=false { spawn-sh "chrome-personal"; }
   MOD+SHIFT+RETURN  repeat=false { spawn-sh "chrome-work"; }
   MOD+SPACE 		    repeat=false { spawn-sh "rofi -show drun"; }
   MOD+PERIOD        repeat=false { spawn-sh "rofimoji --action type --typer wtype"; }
