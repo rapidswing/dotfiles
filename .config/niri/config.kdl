@@ -4,7 +4,7 @@ input {
 
 // HOME MONITORS
 
-
+/*
 // WORK MONITORS
 output "HDMI-A-1" {
   mode "1920x1080@60.000"
@@ -21,6 +21,7 @@ output "HDMI-A-2" {
   mode "1920x1080@60.000"
   position x=4480 y=0
 }
+*/
 
 binds {
   MOD+C 		      repeat=false { "close-window"; }
@@ -57,7 +58,7 @@ binds {
   MOD+RETURN		    repeat=false { spawn-sh "chrome-personal"; }
   MOD+SHIFT+RETURN  repeat=false { spawn-sh "chrome-work"; }
   MOD+SPACE 		    repeat=false { spawn-sh "rofi -show drun"; }
-  MOD+PERIOD        repeat=false { spawn-sh "rofimoji --action type --typer wtype"; }
+  MOD+PERIOD        repeat=false { spawn-sh "rofimoji --action copy && wtype -M shift -k Insert -m shift"; }
   CTRL+ALT+DELETE	  repeat=false { "quit"; }
 
   XF86AudioRaiseVolume  allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+"; }
